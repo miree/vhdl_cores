@@ -1,0 +1,42 @@
+[*]
+[*] GTKWave Analyzer v3.3.79 (w)1999-2017 BSI
+[*] Thu Jan 12 15:50:48 2017
+[*]
+[dumpfile] "/home/michael/projects/vhdl_cores/delay/delay_tb.ghw"
+[dumpfile_mtime] "Thu Jan 12 15:50:24 2017"
+[dumpfile_size] 1014960
+[savefile] "/home/michael/projects/vhdl_cores/delay/delay_tb_view.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -428 -86
+*-32.000000 2500000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.delay_tb.
+[treeopen] top.delay_tb.dut.
+[sst_width] 240
+[signals_width] 160
+[sst_expanded] 1
+[sst_vpaned_height] 150
+@28
+top.delay_tb.rst
+top.delay_tb.clk
+@8023
+#{top.delay_tb.d[7:0]} top.delay_tb.d[7] top.delay_tb.d[6] top.delay_tb.d[5] top.delay_tb.d[4] top.delay_tb.d[3] top.delay_tb.d[2] top.delay_tb.d[1] top.delay_tb.d[0]
+@c08022
+#{top.delay_tb.q[7:0]} top.delay_tb.q[7] top.delay_tb.q[6] top.delay_tb.q[5] top.delay_tb.q[4] top.delay_tb.q[3] top.delay_tb.q[2] top.delay_tb.q[1] top.delay_tb.q[0]
+@28
+top.delay_tb.q[7]
+top.delay_tb.q[6]
+top.delay_tb.q[5]
+top.delay_tb.q[4]
+top.delay_tb.q[3]
+top.delay_tb.q[2]
+top.delay_tb.q[1]
+top.delay_tb.q[0]
+@1401200
+-group_end
+@22
+#{top.delay_tb.dut.r_idx[3:0]} top.delay_tb.dut.r_idx[3] top.delay_tb.dut.r_idx[2] top.delay_tb.dut.r_idx[1] top.delay_tb.dut.r_idx[0]
+#{top.delay_tb.dut.w_idx[3:0]} top.delay_tb.dut.w_idx[3] top.delay_tb.dut.w_idx[2] top.delay_tb.dut.w_idx[1] top.delay_tb.dut.w_idx[0]
+[pattern_trace] 1
+[pattern_trace] 0
