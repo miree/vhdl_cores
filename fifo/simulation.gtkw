@@ -1,0 +1,32 @@
+[*]
+[*] GTKWave Analyzer v3.3.79 (w)1999-2017 BSI
+[*] Thu Jan 12 16:27:02 2017
+[*]
+[dumpfile] "/home/michael/projects/vhdl_cores/fifo/simulation.ghw"
+[dumpfile_mtime] "Thu Jan 12 16:24:54 2017"
+[dumpfile_size] 3047056
+[savefile] "/home/michael/projects/vhdl_cores/fifo/simulation.gtkw"
+[timestart] 19360000000
+[size] 1000 600
+[pos] 547 -125
+*-32.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.testbench.
+[sst_width] 240
+[signals_width] 142
+[sst_expanded] 1
+[sst_vpaned_height] 150
+@28
+top.testbench.empty
+top.testbench.full
+top.testbench.pop
+top.testbench.push
+top.testbench.rst
+top.testbench.clk
+@22
+#{top.testbench.d[31:0]} top.testbench.d[31] top.testbench.d[30] top.testbench.d[29] top.testbench.d[28] top.testbench.d[27] top.testbench.d[26] top.testbench.d[25] top.testbench.d[24] top.testbench.d[23] top.testbench.d[22] top.testbench.d[21] top.testbench.d[20] top.testbench.d[19] top.testbench.d[18] top.testbench.d[17] top.testbench.d[16] top.testbench.d[15] top.testbench.d[14] top.testbench.d[13] top.testbench.d[12] top.testbench.d[11] top.testbench.d[10] top.testbench.d[9] top.testbench.d[8] top.testbench.d[7] top.testbench.d[6] top.testbench.d[5] top.testbench.d[4] top.testbench.d[3] top.testbench.d[2] top.testbench.d[1] top.testbench.d[0]
+#{top.testbench.q[31:0]} top.testbench.q[31] top.testbench.q[30] top.testbench.q[29] top.testbench.q[28] top.testbench.q[27] top.testbench.q[26] top.testbench.q[25] top.testbench.q[24] top.testbench.q[23] top.testbench.q[22] top.testbench.q[21] top.testbench.q[20] top.testbench.q[19] top.testbench.q[18] top.testbench.q[17] top.testbench.q[16] top.testbench.q[15] top.testbench.q[14] top.testbench.q[13] top.testbench.q[12] top.testbench.q[11] top.testbench.q[10] top.testbench.q[9] top.testbench.q[8] top.testbench.q[7] top.testbench.q[6] top.testbench.q[5] top.testbench.q[4] top.testbench.q[3] top.testbench.q[2] top.testbench.q[1] top.testbench.q[0]
+#{top.testbench.ctr[31:0]} top.testbench.ctr[31] top.testbench.ctr[30] top.testbench.ctr[29] top.testbench.ctr[28] top.testbench.ctr[27] top.testbench.ctr[26] top.testbench.ctr[25] top.testbench.ctr[24] top.testbench.ctr[23] top.testbench.ctr[22] top.testbench.ctr[21] top.testbench.ctr[20] top.testbench.ctr[19] top.testbench.ctr[18] top.testbench.ctr[17] top.testbench.ctr[16] top.testbench.ctr[15] top.testbench.ctr[14] top.testbench.ctr[13] top.testbench.ctr[12] top.testbench.ctr[11] top.testbench.ctr[10] top.testbench.ctr[9] top.testbench.ctr[8] top.testbench.ctr[7] top.testbench.ctr[6] top.testbench.ctr[5] top.testbench.ctr[4] top.testbench.ctr[3] top.testbench.ctr[2] top.testbench.ctr[1] top.testbench.ctr[0]
+#{top.testbench.expected[31:0]} top.testbench.expected[31] top.testbench.expected[30] top.testbench.expected[29] top.testbench.expected[28] top.testbench.expected[27] top.testbench.expected[26] top.testbench.expected[25] top.testbench.expected[24] top.testbench.expected[23] top.testbench.expected[22] top.testbench.expected[21] top.testbench.expected[20] top.testbench.expected[19] top.testbench.expected[18] top.testbench.expected[17] top.testbench.expected[16] top.testbench.expected[15] top.testbench.expected[14] top.testbench.expected[13] top.testbench.expected[12] top.testbench.expected[11] top.testbench.expected[10] top.testbench.expected[9] top.testbench.expected[8] top.testbench.expected[7] top.testbench.expected[6] top.testbench.expected[5] top.testbench.expected[4] top.testbench.expected[3] top.testbench.expected[2] top.testbench.expected[1] top.testbench.expected[0]
+[pattern_trace] 1
+[pattern_trace] 0
