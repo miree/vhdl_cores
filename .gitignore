@@ -4,3 +4,4 @@
 
 delay/delay_tb
 fifo/testbench
+maw/maw_tb

@@ -1,0 +1,47 @@
+[*]
+[*] GTKWave Analyzer v3.3.79 (w)1999-2017 BSI
+[*] Fri Jan 13 09:34:08 2017
+[*]
+[dumpfile] "/home/michael/projects/vhdl_cores/maw/maw_tb.ghw"
+[dumpfile_mtime] "Fri Jan 13 09:33:44 2017"
+[dumpfile_size] 868842
+[savefile] "/home/michael/projects/vhdl_cores/maw/maw_tb_view.gtkw"
+[timestart] 75346000000
+[size] 1000 600
+[pos] -1 -1
+*-30.000000 1300000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.maw_tb.
+[treeopen] top.maw_tb.dut.
+[sst_width] 240
+[signals_width] 214
+[sst_expanded] 1
+[sst_vpaned_height] 150
+@28
+top.maw_tb.rst
+top.maw_tb.clk
+@8022
+#{top.maw_tb.input_value[7:0]} top.maw_tb.input_value[7] top.maw_tb.input_value[6] top.maw_tb.input_value[5] top.maw_tb.input_value[4] top.maw_tb.input_value[3] top.maw_tb.input_value[2] top.maw_tb.input_value[1] top.maw_tb.input_value[0]
+@20000
+-
+-
+@20001
+-
+@20000
+-
+@8022
+#{top.maw_tb.dut.delayed[7:0]} top.maw_tb.dut.delayed[7] top.maw_tb.dut.delayed[6] top.maw_tb.dut.delayed[5] top.maw_tb.dut.delayed[4] top.maw_tb.dut.delayed[3] top.maw_tb.dut.delayed[2] top.maw_tb.dut.delayed[1] top.maw_tb.dut.delayed[0]
+@20000
+-
+-
+-
+-
+@8022
+#{top.maw_tb.output_value[12:0]} top.maw_tb.output_value[12] top.maw_tb.output_value[11] top.maw_tb.output_value[10] top.maw_tb.output_value[9] top.maw_tb.output_value[8] top.maw_tb.output_value[7] top.maw_tb.output_value[6] top.maw_tb.output_value[5] top.maw_tb.output_value[4] top.maw_tb.output_value[3] top.maw_tb.output_value[2] top.maw_tb.output_value[1] top.maw_tb.output_value[0]
+@20000
+-
+-
+-
+-
+[pattern_trace] 1
+[pattern_trace] 0
