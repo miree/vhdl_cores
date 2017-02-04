@@ -29,11 +29,11 @@ begin
       bit_width => input_bit_width
     )
     port map (
-        clk_i   => clk_i,
-        rst_i   => rst_i,
-        q_o     => delayed, -- type conversion only wokrs for inputs (see line below)
-                            --   so here an additional signal is used for type matching
-        d_i     => std_logic_vector(value_i) 
+      clk_i   => clk_i,
+      rst_i   => rst_i,
+      q_o     => delayed, -- type conversion only works for inputs (see line below)
+                          --   so here an additional signal is used for type matching
+      d_i     => std_logic_vector(value_i) 
     );
 
   process (clk_i)
