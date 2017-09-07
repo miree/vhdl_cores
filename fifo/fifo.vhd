@@ -27,7 +27,7 @@ architecture rtl of fifo is
   signal fifo_data : fifo_data_array;
   -- read and write index pointers
   --  give them one bit more then needed to quickly check for overflow
-  --  by looking at the most significant bit (tip from Matthias Kreider)
+  --  by looking at the most significant bit (tip from Mathias Kreider)
   signal w_idx     : unsigned ( depth downto 0 );
   signal r_idx     : unsigned ( depth downto 0 );
 begin
@@ -46,15 +46,14 @@ begin
         if push_i = '1' then
           fifo_data(to_integer(w_idx(depth-1 downto 0))) <= d_i;
           w_idx <= w_idx + 1;
-                   -- typecasts can be avoided when using the library use ieee.std_logic_unsigned.all;
         end if;
 
         --  reading
         if pop_i = '1' then
-          q_o   <= fifo_data(to_integer(r_idx(depth-1 downto 0)));
           r_idx <= r_idx + 1; 
-                   -- typecasts can be avoided when using the library use ieee.std_logic_unsigned.all;
         end if;
+        -- synchronous output of value at r_idx
+        q_o <= fifo_data(to_integer(r_idx(depth-1 downto 0)));
 
         -- update empty and full signals
         if r_idx(depth-1 downto 0) = w_idx(depth-1 downto 0) then

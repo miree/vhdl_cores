@@ -22,7 +22,7 @@ architecture simulation of testbench is
   -- the value that is pushed to the fifo
   signal ctr         : std_logic_vector ( bit_width-1 downto 0 ) := (others => '0');
   -- the value that is expected to be read from the fifo (initialized with -1)
-  signal expected    : std_logic_vector ( bit_width-1 downto 0 ) := (others => '1');
+  signal expected    : std_logic_vector ( bit_width-1 downto 0 ) := (others => '0');
 
 begin
   -- instantiate device under test (dut)
@@ -83,19 +83,26 @@ begin
     for i in 0 to 3 loop
       pop <= '1';
         wait for clk_period;
-      assert unsigned(q) = unsigned(expected) 
-        report "We didn't get what we expect (" 
-              & integer'image(to_integer(unsigned(q))) 
-              & " /= "
-              & integer'image(to_integer(unsigned(expected)))
-              & ")";
       pop <= '0';
         wait for clk_period*5;
         --expected := std_logic_vector(unsigned(expected) + 1);
                     -- typecasts can be avoided when using the library use ieee.std_logic_unsigned.all;
     end loop;
-
   end process;
+
+  check: process
+  begin
+    wait until rising_edge(clk);
+    if empty = '0' and pop = '1' then
+      assert unsigned(q) = unsigned(expected)
+            report "We didn't get what we expect (" 
+              & integer'image(to_integer(unsigned(q))) 
+              & " /= "
+              & integer'image(to_integer(unsigned(expected)))
+              & ")";
+    end if;
+  end process;
+
 
   -- this process increments the counter (that is the value which is written to the fifo)
   -- only on rising clock edges when the acknowledge signal was sent back from the fifo, i.e.
