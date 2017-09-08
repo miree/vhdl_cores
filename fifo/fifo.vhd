@@ -31,39 +31,39 @@ architecture rtl of fifo is
   signal w_idx     : unsigned ( depth downto 0 );
   signal r_idx     : unsigned ( depth downto 0 );
 
+  signal msb_xor       : std_logic;
   signal empty_or_full : boolean;
-  signal msb_xor   : std_logic;
+  signal empty         : std_logic;
+  signal full          : std_logic;
+  signal q             : std_logic_vector ( bit_width-1 downto 0 );
 
-  signal empty : std_logic;
-  signal q     : std_logic_vector ( bit_width-1 downto 0 );
 
 begin
-  main: process (clk_i)
+  main: process
   begin
-    if rising_edge(clk_i) then
-      if rst_i = '1' then 
-        w_idx   <= (others => '0'); 
-        r_idx   <= (others => '0');
+    wait until rising_edge(clk_i);
+    if rst_i = '1' then 
+      w_idx   <= (others => '0'); 
+      r_idx   <= (others => '0');
+    else
+       -- write
+      if push_i = '1' then
+        fifo_data(to_integer(w_idx(depth-1 downto 0))) <= d_i;
+        w_idx <= w_idx + 1;
+      end if;
+      -- read
+      if pop_i = '1' then
+        r_idx <= r_idx + 1; 
+      end if;
+      -- synchronous output to allow inference of block ram
+      if push_i = '1' and empty = '1' then
+        q <= d_i;
+        report "push output";
+      elsif pop_i = '1' then
+        q <= fifo_data(to_integer(r_idx(depth-1 downto 0)+1));
+        report "pop output";
       else
-        --  writing
-        if push_i = '1' then
-          fifo_data(to_integer(w_idx(depth-1 downto 0))) <= d_i;
-          w_idx <= w_idx + 1;
-        end if;
-        --  reading
-        if pop_i = '1' then
-
-          r_idx <= r_idx + 1; 
-        end if;
-
-        -- synchronous output to allow inference of block ram
-        if push_i = '1' and empty = '1' then
-          q <= d_i;
-        elsif pop_i = '1' then
-          q <= fifo_data(to_integer(r_idx(depth-1 downto 0)+1));
-        else
-          q <= fifo_data(to_integer(r_idx(depth-1 downto 0)));
-        end if;
+        q <= fifo_data(to_integer(r_idx(depth-1 downto 0)));
       end if;
     end if;
   end process;
@@ -74,7 +74,8 @@ begin
   msb_xor       <= (r_idx(depth) xor w_idx(depth));
   empty_or_full <= r_idx(depth-1 downto 0) = w_idx(depth-1 downto 0);
 
-  full_o     <=     msb_xor when empty_or_full else '0';
+  full       <=     msb_xor when empty_or_full else '0';
+  full_o     <= full;
   empty      <= not msb_xor when empty_or_full else '0';
   empty_o    <= empty;
 

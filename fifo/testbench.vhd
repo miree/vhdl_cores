@@ -75,7 +75,7 @@ begin
       d    <= ctr;
       push <= '1';
 
-      if to_integer(unsigned(ctr)) = 3 then 
+      if to_integer(unsigned(ctr)) = 2 then 
         pop <= '1';
       else
         pop <= '0';
@@ -114,7 +114,7 @@ begin
 
   check: process
   begin
-    wait until falling_edge(clk);
+    wait until rising_edge(clk);
     if empty = '0' and pop = '1' then
       assert unsigned(q) = unsigned(expected)
             report "We didn't get what we expect (" 
