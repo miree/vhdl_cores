@@ -30,43 +30,55 @@ architecture rtl of fifo is
   --  by looking at the most significant bit (tip from Mathias Kreider)
   signal w_idx     : unsigned ( depth downto 0 );
   signal r_idx     : unsigned ( depth downto 0 );
+
+  signal empty_or_full : boolean;
+  signal msb_xor   : std_logic;
+
+  signal empty : std_logic;
+  signal q     : std_logic_vector ( bit_width-1 downto 0 );
+
 begin
   main: process (clk_i)
   begin
     if rising_edge(clk_i) then
-      if rst_i = '0' then -- reset is active low
-        -- force reset state
+      if rst_i = '1' then 
         w_idx   <= (others => '0'); 
         r_idx   <= (others => '0');
-        empty_o <= '1';
-        full_o  <= '0';
       else
-        -- normal operation:
         --  writing
         if push_i = '1' then
           fifo_data(to_integer(w_idx(depth-1 downto 0))) <= d_i;
           w_idx <= w_idx + 1;
         end if;
-
         --  reading
         if pop_i = '1' then
+
           r_idx <= r_idx + 1; 
         end if;
-        -- synchronous output of value at r_idx
-        q_o <= fifo_data(to_integer(r_idx(depth-1 downto 0)));
 
-        -- update empty and full signals
-        if r_idx(depth-1 downto 0) = w_idx(depth-1 downto 0) then
-          full_o  <=      r_idx(depth) xor w_idx(depth);
-          empty_o <= not (r_idx(depth) xor w_idx(depth));
+        -- synchronous output to allow inference of block ram
+        if push_i = '1' and empty = '1' then
+          q <= d_i;
+        elsif pop_i = '1' then
+          q <= fifo_data(to_integer(r_idx(depth-1 downto 0)+1));
         else
-          full_o  <= '0';
-          empty_o <= '0';
-        end if; 
-
+          q <= fifo_data(to_integer(r_idx(depth-1 downto 0)));
+        end if;
       end if;
-
     end if;
   end process;
+
+  -- If read and write index up to (not including) the most significant bit are identical,
+  --  the fifo is either empty or full.
+  -- The xor of the most significant bit decides if the fifo is full or empty.
+  msb_xor       <= (r_idx(depth) xor w_idx(depth));
+  empty_or_full <= r_idx(depth-1 downto 0) = w_idx(depth-1 downto 0);
+
+  full_o     <=     msb_xor when empty_or_full else '0';
+  empty      <= not msb_xor when empty_or_full else '0';
+  empty_o    <= empty;
+
+  -- for simulations it is more obvious if an empty fifo has 'u' on output
+  q_o        <= (others => 'U') when empty = '1' else q;
 
 end architecture;

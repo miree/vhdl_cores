@@ -18,7 +18,7 @@ end entity;
 
 -- Take a non-guarded fifo and take control over the
 -- push and pull lines and prevent illegal operations. 
--- Forward the full and empty signals are forwarded.
+-- Forward the full and empty signals.
 use work.fifo_pkg.all;
 architecture rtl of guarded_fifo is
   signal push, pop, full, empty   : std_logic;
