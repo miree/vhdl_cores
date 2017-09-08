@@ -24,8 +24,6 @@ architecture simulation of testbench is
   -- the value that is expected to be read from the fifo (initialized with -1)
   signal expected    : std_logic_vector ( bit_width-1 downto 0 ) := (others => '0');
 
-  signal target_reg  : std_logic_vector ( bit_width-1 downto 0 );
-
 begin
   -- instantiate device under test (dut)
   dut : work.guarded_fifo_pkg.guarded_fifo
@@ -58,15 +56,6 @@ begin
     wait for clk_period*20;
     rst <= '0';
     wait;
-  end process;
-
-  target: process (clk)
-  begin
-    if rising_edge(clk) then
-      if pop = '1' then
-        target_reg <= q;
-      end if;
-    end if;
   end process;
 
   p_read_write : process
