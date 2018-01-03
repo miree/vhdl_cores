@@ -1,0 +1,44 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Tue Jan  2 18:59:50 2018
+[*]
+[dumpfile] "/home/michael/projects/vhdl_cores/fifo/slow_read_fifo/simulation.ghw"
+[dumpfile_mtime] "Tue Jan  2 18:59:07 2018"
+[dumpfile_size] 2021891
+[savefile] "/home/michael/projects/vhdl_cores/fifo/slow_read_fifo/simulation.gtkw"
+[timestart] 0
+[size] 1400 1001
+[pos] -1 -1
+*-29.000000 405450000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.testbench.
+[treeopen] top.testbench.dut.
+[treeopen] top.testbench.dut.fifo.
+[treeopen] top.testbench.dut.fifo.fifo_data.
+[sst_width] 240
+[signals_width] 236
+[sst_expanded] 1
+[sst_vpaned_height] 287
+@200
+-Testbench
+@28
+top.testbench.rst
+top.testbench.rst_fast
+top.testbench.clk
+top.testbench.clk_fast
+top.testbench.full
+top.testbench.push
+@200
+-DUT
+@22
+#{top.testbench.dut.fifo.fifo_data[3][31:0]} top.testbench.dut.fifo.fifo_data[3][31] top.testbench.dut.fifo.fifo_data[3][30] top.testbench.dut.fifo.fifo_data[3][29] top.testbench.dut.fifo.fifo_data[3][28] top.testbench.dut.fifo.fifo_data[3][27] top.testbench.dut.fifo.fifo_data[3][26] top.testbench.dut.fifo.fifo_data[3][25] top.testbench.dut.fifo.fifo_data[3][24] top.testbench.dut.fifo.fifo_data[3][23] top.testbench.dut.fifo.fifo_data[3][22] top.testbench.dut.fifo.fifo_data[3][21] top.testbench.dut.fifo.fifo_data[3][20] top.testbench.dut.fifo.fifo_data[3][19] top.testbench.dut.fifo.fifo_data[3][18] top.testbench.dut.fifo.fifo_data[3][17] top.testbench.dut.fifo.fifo_data[3][16] top.testbench.dut.fifo.fifo_data[3][15] top.testbench.dut.fifo.fifo_data[3][14] top.testbench.dut.fifo.fifo_data[3][13] top.testbench.dut.fifo.fifo_data[3][12] top.testbench.dut.fifo.fifo_data[3][11] top.testbench.dut.fifo.fifo_data[3][10] top.testbench.dut.fifo.fifo_data[3][9] top.testbench.dut.fifo.fifo_data[3][8] top.testbench.dut.fifo.fifo_data[3][7] top.testbench.dut.fifo.fifo_data[3][6] top.testbench.dut.fifo.fifo_data[3][5] top.testbench.dut.fifo.fifo_data[3][4] top.testbench.dut.fifo.fifo_data[3][3] top.testbench.dut.fifo.fifo_data[3][2] top.testbench.dut.fifo.fifo_data[3][1] top.testbench.dut.fifo.fifo_data[3][0]
+#{top.testbench.dut.fifo.fifo_data[2][31:0]} top.testbench.dut.fifo.fifo_data[2][31] top.testbench.dut.fifo.fifo_data[2][30] top.testbench.dut.fifo.fifo_data[2][29] top.testbench.dut.fifo.fifo_data[2][28] top.testbench.dut.fifo.fifo_data[2][27] top.testbench.dut.fifo.fifo_data[2][26] top.testbench.dut.fifo.fifo_data[2][25] top.testbench.dut.fifo.fifo_data[2][24] top.testbench.dut.fifo.fifo_data[2][23] top.testbench.dut.fifo.fifo_data[2][22] top.testbench.dut.fifo.fifo_data[2][21] top.testbench.dut.fifo.fifo_data[2][20] top.testbench.dut.fifo.fifo_data[2][19] top.testbench.dut.fifo.fifo_data[2][18] top.testbench.dut.fifo.fifo_data[2][17] top.testbench.dut.fifo.fifo_data[2][16] top.testbench.dut.fifo.fifo_data[2][15] top.testbench.dut.fifo.fifo_data[2][14] top.testbench.dut.fifo.fifo_data[2][13] top.testbench.dut.fifo.fifo_data[2][12] top.testbench.dut.fifo.fifo_data[2][11] top.testbench.dut.fifo.fifo_data[2][10] top.testbench.dut.fifo.fifo_data[2][9] top.testbench.dut.fifo.fifo_data[2][8] top.testbench.dut.fifo.fifo_data[2][7] top.testbench.dut.fifo.fifo_data[2][6] top.testbench.dut.fifo.fifo_data[2][5] top.testbench.dut.fifo.fifo_data[2][4] top.testbench.dut.fifo.fifo_data[2][3] top.testbench.dut.fifo.fifo_data[2][2] top.testbench.dut.fifo.fifo_data[2][1] top.testbench.dut.fifo.fifo_data[2][0]
+#{top.testbench.dut.fifo.fifo_data[1][31:0]} top.testbench.dut.fifo.fifo_data[1][31] top.testbench.dut.fifo.fifo_data[1][30] top.testbench.dut.fifo.fifo_data[1][29] top.testbench.dut.fifo.fifo_data[1][28] top.testbench.dut.fifo.fifo_data[1][27] top.testbench.dut.fifo.fifo_data[1][26] top.testbench.dut.fifo.fifo_data[1][25] top.testbench.dut.fifo.fifo_data[1][24] top.testbench.dut.fifo.fifo_data[1][23] top.testbench.dut.fifo.fifo_data[1][22] top.testbench.dut.fifo.fifo_data[1][21] top.testbench.dut.fifo.fifo_data[1][20] top.testbench.dut.fifo.fifo_data[1][19] top.testbench.dut.fifo.fifo_data[1][18] top.testbench.dut.fifo.fifo_data[1][17] top.testbench.dut.fifo.fifo_data[1][16] top.testbench.dut.fifo.fifo_data[1][15] top.testbench.dut.fifo.fifo_data[1][14] top.testbench.dut.fifo.fifo_data[1][13] top.testbench.dut.fifo.fifo_data[1][12] top.testbench.dut.fifo.fifo_data[1][11] top.testbench.dut.fifo.fifo_data[1][10] top.testbench.dut.fifo.fifo_data[1][9] top.testbench.dut.fifo.fifo_data[1][8] top.testbench.dut.fifo.fifo_data[1][7] top.testbench.dut.fifo.fifo_data[1][6] top.testbench.dut.fifo.fifo_data[1][5] top.testbench.dut.fifo.fifo_data[1][4] top.testbench.dut.fifo.fifo_data[1][3] top.testbench.dut.fifo.fifo_data[1][2] top.testbench.dut.fifo.fifo_data[1][1] top.testbench.dut.fifo.fifo_data[1][0]
+#{top.testbench.dut.fifo.fifo_data[0][31:0]} top.testbench.dut.fifo.fifo_data[0][31] top.testbench.dut.fifo.fifo_data[0][30] top.testbench.dut.fifo.fifo_data[0][29] top.testbench.dut.fifo.fifo_data[0][28] top.testbench.dut.fifo.fifo_data[0][27] top.testbench.dut.fifo.fifo_data[0][26] top.testbench.dut.fifo.fifo_data[0][25] top.testbench.dut.fifo.fifo_data[0][24] top.testbench.dut.fifo.fifo_data[0][23] top.testbench.dut.fifo.fifo_data[0][22] top.testbench.dut.fifo.fifo_data[0][21] top.testbench.dut.fifo.fifo_data[0][20] top.testbench.dut.fifo.fifo_data[0][19] top.testbench.dut.fifo.fifo_data[0][18] top.testbench.dut.fifo.fifo_data[0][17] top.testbench.dut.fifo.fifo_data[0][16] top.testbench.dut.fifo.fifo_data[0][15] top.testbench.dut.fifo.fifo_data[0][14] top.testbench.dut.fifo.fifo_data[0][13] top.testbench.dut.fifo.fifo_data[0][12] top.testbench.dut.fifo.fifo_data[0][11] top.testbench.dut.fifo.fifo_data[0][10] top.testbench.dut.fifo.fifo_data[0][9] top.testbench.dut.fifo.fifo_data[0][8] top.testbench.dut.fifo.fifo_data[0][7] top.testbench.dut.fifo.fifo_data[0][6] top.testbench.dut.fifo.fifo_data[0][5] top.testbench.dut.fifo.fifo_data[0][4] top.testbench.dut.fifo.fifo_data[0][3] top.testbench.dut.fifo.fifo_data[0][2] top.testbench.dut.fifo.fifo_data[0][1] top.testbench.dut.fifo.fifo_data[0][0]
+@28
+top.testbench.data_ready
+top.testbench.data_acknowledge
+@25
+#{top.testbench.q[31:0]} top.testbench.q[31] top.testbench.q[30] top.testbench.q[29] top.testbench.q[28] top.testbench.q[27] top.testbench.q[26] top.testbench.q[25] top.testbench.q[24] top.testbench.q[23] top.testbench.q[22] top.testbench.q[21] top.testbench.q[20] top.testbench.q[19] top.testbench.q[18] top.testbench.q[17] top.testbench.q[16] top.testbench.q[15] top.testbench.q[14] top.testbench.q[13] top.testbench.q[12] top.testbench.q[11] top.testbench.q[10] top.testbench.q[9] top.testbench.q[8] top.testbench.q[7] top.testbench.q[6] top.testbench.q[5] top.testbench.q[4] top.testbench.q[3] top.testbench.q[2] top.testbench.q[1] top.testbench.q[0]
+[pattern_trace] 1
+[pattern_trace] 0
