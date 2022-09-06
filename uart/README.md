@@ -1,9 +1,7 @@
-[TOC]
-
 # Bidirectional UART wishbone bridge
 
 This component provides wishbone master and slave interfaces on the FPGA side and communicates with a host system over two serial UART lines.
-Detailed specification of the underlying protocol will be added soon. A C-API (uart_wbp_access.h, uart_wbp_access.c) is provided that implements the underlying protocol on a Linux-System and can be used to write software that interacts with the wishbone systems on the connected FPGA.
+Detailed specification of the underlying protocol is given below. A C-API (uart_wbp_access.h, uart_wbp_access.c) is provided that implements the underlying protocol on a Linux-System and can be used to write software that interacts with the wishbone systems on the connected FPGA.
 The bridge is build in such a way that loop-back communication is possible. If the wishbone master and slave interfaces on the FPGA are connected together, the host can talk to itself through the FPGA, which facilitates integration tests of all components of the bridge.
 By default, the slave and the host send responses (ack,err,rty) to the wishbone master strobes (stb). This can be disabled to increase throughput. 
 The hardware slave can send a stall-timeout repsonse if the addressed slave failed to respond within a configurable amount of clock cycles. This can be useful during development.
