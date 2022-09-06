@@ -1,0 +1,50 @@
+[*]
+[*] GTKWave Analyzer v3.3.109 (w)1999-2020 BSI
+[*] Fri Oct 22 17:41:05 2021
+[*]
+[dumpfile] "/home/michael/projects/fpga-modules/wishbone/uart_bridge/test_loopback/simulation.ghw"
+[dumpfile_mtime] "Fri Oct 22 17:40:56 2021"
+[dumpfile_size] 1151218
+[savefile] "/home/michael/projects/fpga-modules/wishbone/uart_bridge/test_loopback/simulation.gtkw"
+[timestart] 0
+[size] 1278 720
+[pos] -1 -1
+*-37.284199 45666665936 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.testbench.
+[treeopen] top.testbench.master.
+[sst_width] 351
+[signals_width] 158
+[sst_expanded] 1
+[sst_vpaned_height] 191
+@200
+-wishbone
+@28
+top.testbench.wbp.miso.ack
+@22
+#{top.testbench.wbp.miso.dat[31:0]} top.testbench.wbp.miso.dat[31] top.testbench.wbp.miso.dat[30] top.testbench.wbp.miso.dat[29] top.testbench.wbp.miso.dat[28] top.testbench.wbp.miso.dat[27] top.testbench.wbp.miso.dat[26] top.testbench.wbp.miso.dat[25] top.testbench.wbp.miso.dat[24] top.testbench.wbp.miso.dat[23] top.testbench.wbp.miso.dat[22] top.testbench.wbp.miso.dat[21] top.testbench.wbp.miso.dat[20] top.testbench.wbp.miso.dat[19] top.testbench.wbp.miso.dat[18] top.testbench.wbp.miso.dat[17] top.testbench.wbp.miso.dat[16] top.testbench.wbp.miso.dat[15] top.testbench.wbp.miso.dat[14] top.testbench.wbp.miso.dat[13] top.testbench.wbp.miso.dat[12] top.testbench.wbp.miso.dat[11] top.testbench.wbp.miso.dat[10] top.testbench.wbp.miso.dat[9] top.testbench.wbp.miso.dat[8] top.testbench.wbp.miso.dat[7] top.testbench.wbp.miso.dat[6] top.testbench.wbp.miso.dat[5] top.testbench.wbp.miso.dat[4] top.testbench.wbp.miso.dat[3] top.testbench.wbp.miso.dat[2] top.testbench.wbp.miso.dat[1] top.testbench.wbp.miso.dat[0]
+@28
+top.testbench.wbp.miso.err
+top.testbench.wbp.miso.rty
+top.testbench.wbp.miso.stall
+@22
+#{top.testbench.wbp.mosi.adr[31:0]} top.testbench.wbp.mosi.adr[31] top.testbench.wbp.mosi.adr[30] top.testbench.wbp.mosi.adr[29] top.testbench.wbp.mosi.adr[28] top.testbench.wbp.mosi.adr[27] top.testbench.wbp.mosi.adr[26] top.testbench.wbp.mosi.adr[25] top.testbench.wbp.mosi.adr[24] top.testbench.wbp.mosi.adr[23] top.testbench.wbp.mosi.adr[22] top.testbench.wbp.mosi.adr[21] top.testbench.wbp.mosi.adr[20] top.testbench.wbp.mosi.adr[19] top.testbench.wbp.mosi.adr[18] top.testbench.wbp.mosi.adr[17] top.testbench.wbp.mosi.adr[16] top.testbench.wbp.mosi.adr[15] top.testbench.wbp.mosi.adr[14] top.testbench.wbp.mosi.adr[13] top.testbench.wbp.mosi.adr[12] top.testbench.wbp.mosi.adr[11] top.testbench.wbp.mosi.adr[10] top.testbench.wbp.mosi.adr[9] top.testbench.wbp.mosi.adr[8] top.testbench.wbp.mosi.adr[7] top.testbench.wbp.mosi.adr[6] top.testbench.wbp.mosi.adr[5] top.testbench.wbp.mosi.adr[4] top.testbench.wbp.mosi.adr[3] top.testbench.wbp.mosi.adr[2] top.testbench.wbp.mosi.adr[1] top.testbench.wbp.mosi.adr[0]
+@28
+top.testbench.wbp.mosi.cyc
+@22
+#{top.testbench.wbp.mosi.dat[31:0]} top.testbench.wbp.mosi.dat[31] top.testbench.wbp.mosi.dat[30] top.testbench.wbp.mosi.dat[29] top.testbench.wbp.mosi.dat[28] top.testbench.wbp.mosi.dat[27] top.testbench.wbp.mosi.dat[26] top.testbench.wbp.mosi.dat[25] top.testbench.wbp.mosi.dat[24] top.testbench.wbp.mosi.dat[23] top.testbench.wbp.mosi.dat[22] top.testbench.wbp.mosi.dat[21] top.testbench.wbp.mosi.dat[20] top.testbench.wbp.mosi.dat[19] top.testbench.wbp.mosi.dat[18] top.testbench.wbp.mosi.dat[17] top.testbench.wbp.mosi.dat[16] top.testbench.wbp.mosi.dat[15] top.testbench.wbp.mosi.dat[14] top.testbench.wbp.mosi.dat[13] top.testbench.wbp.mosi.dat[12] top.testbench.wbp.mosi.dat[11] top.testbench.wbp.mosi.dat[10] top.testbench.wbp.mosi.dat[9] top.testbench.wbp.mosi.dat[8] top.testbench.wbp.mosi.dat[7] top.testbench.wbp.mosi.dat[6] top.testbench.wbp.mosi.dat[5] top.testbench.wbp.mosi.dat[4] top.testbench.wbp.mosi.dat[3] top.testbench.wbp.mosi.dat[2] top.testbench.wbp.mosi.dat[1] top.testbench.wbp.mosi.dat[0]
+#{top.testbench.wbp.mosi.sel[3:0]} top.testbench.wbp.mosi.sel[3] top.testbench.wbp.mosi.sel[2] top.testbench.wbp.mosi.sel[1] top.testbench.wbp.mosi.sel[0]
+@28
+top.testbench.wbp.mosi.stb
+top.testbench.wbp.mosi.we
+@200
+-UART
+@28
+top.testbench.uart_chip.rx_i
+top.testbench.uart_chip.tx_o
+@200
+-GPO-bits
+@23
+#{top.testbench.master.gpo_bits_o[31:0]} top.testbench.master.gpo_bits_o[31] top.testbench.master.gpo_bits_o[30] top.testbench.master.gpo_bits_o[29] top.testbench.master.gpo_bits_o[28] top.testbench.master.gpo_bits_o[27] top.testbench.master.gpo_bits_o[26] top.testbench.master.gpo_bits_o[25] top.testbench.master.gpo_bits_o[24] top.testbench.master.gpo_bits_o[23] top.testbench.master.gpo_bits_o[22] top.testbench.master.gpo_bits_o[21] top.testbench.master.gpo_bits_o[20] top.testbench.master.gpo_bits_o[19] top.testbench.master.gpo_bits_o[18] top.testbench.master.gpo_bits_o[17] top.testbench.master.gpo_bits_o[16] top.testbench.master.gpo_bits_o[15] top.testbench.master.gpo_bits_o[14] top.testbench.master.gpo_bits_o[13] top.testbench.master.gpo_bits_o[12] top.testbench.master.gpo_bits_o[11] top.testbench.master.gpo_bits_o[10] top.testbench.master.gpo_bits_o[9] top.testbench.master.gpo_bits_o[8] top.testbench.master.gpo_bits_o[7] top.testbench.master.gpo_bits_o[6] top.testbench.master.gpo_bits_o[5] top.testbench.master.gpo_bits_o[4] top.testbench.master.gpo_bits_o[3] top.testbench.master.gpo_bits_o[2] top.testbench.master.gpo_bits_o[1] top.testbench.master.gpo_bits_o[0]
+[pattern_trace] 1
+[pattern_trace] 0
