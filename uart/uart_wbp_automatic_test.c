@@ -109,7 +109,8 @@ int main(int argc, char **argv) {
 		fprintf(stderr,"cannot open device \"%s\"\n", device_name);
 		return 2;
 	}
-
+	uart_wbp_config_t bridge_config = host_sends_write_response | fpga_sends_write_response;
+	uart_wbp_configure(device, bridge_config);
 	uart_wbp_set_stall_timeout(device, 50000000);
 
 	device->write_handler = &my_uart_wbp_slave_write_handler;

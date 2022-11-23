@@ -6,14 +6,14 @@
 #include <stdint.h>
 
 typedef enum uart_wbp_response {
-	write_response = 0,
-	ack            = 1,
-	err            = 2,
-	rty            = 3,
-	stall_timeout  = 4,
-	write_request  = 5,
-	// fast_write_request   = 6,
-	read_request   = 7,
+	write_response  = 0,
+	ack             = 1,
+	err             = 2,
+	rty             = 3,
+	stall_timeout   = 4,
+	write_request   = 5, // 101
+	write_req_norsp = 6, // 110
+	read_request    = 7, // 111
 	// if write response is disabled, unknown is returned
 	unknown        = 8, 
 } uart_wbp_response_t;

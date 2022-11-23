@@ -102,7 +102,7 @@ int reset_bridge_state(uart_wbp_device_t *device) {
 	device->wb_dat    = 0x0;
 	device->wb_adr    = 0x0;
 	device->wb_sel    = 0x0;
-	device->hw_config = host_sends_write_response | fpga_sends_write_response;
+	device->hw_config = /*host_sends_write_response |*/ fpga_sends_write_response;
 
 	return 0;
 }
@@ -219,6 +219,7 @@ int uart_wbp_buffered_read(uart_wbp_device_t *device, uint8_t *dat) {
 
 int uart_wbp_handle_slave_write(uart_wbp_device_t *device, uint8_t header) {
 	uint8_t sel = header&0x0f;
+	int send_write_response = ((0x7&(header>>4))==write_request)?1:0;
 
 	// build address
 	uint32_t adr = 0x0;
@@ -258,7 +259,8 @@ int uart_wbp_handle_slave_write(uart_wbp_device_t *device, uint8_t header) {
 	}
 	// printf("dat = %08x\n", dat);
 	int response = device->write_handler(sel, adr, dat);
-	if (device->hw_config & host_sends_write_response) {
+	// if (device->hw_config & host_sends_write_response) {
+	if (send_write_response) {
 		// printf("host_sends_write_response is true, send response %d\n", response);
 		// send repsone 
 		//uart_wbp_master_response_ack
@@ -411,7 +413,7 @@ int uart_wbp_read_header(uart_wbp_device_t *device, uint8_t *header, int expect_
 			case stall_timeout:
 				// printf("got read response stall_timeout\n");
 				return 0;
-			case write_request:
+			case write_request: case write_req_norsp:
 				// printf("the slave intefcace was written to\n");
 				uart_wbp_handle_slave_write(device, *header);
 				if (expect_rw) {
@@ -443,6 +445,7 @@ const char* uart_wbp_response_str(uart_wbp_response_t response)
 		case rty: return "rty";
 		case stall_timeout: return "stall_timeout";
 		case write_request: return "write_request";
+		case write_req_norsp: return "write_request_no_response";
 		case read_request: return "read_request";
 		case unknown: return "unknown (response deactivated)";
 		default: return "unkonwn (something went wrong)";

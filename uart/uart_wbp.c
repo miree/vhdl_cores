@@ -5,17 +5,29 @@
 void print_help(const char* argv0){
 	fprintf(stderr, "usage: %s [options] <devciename> <adr> [ <dat> ]\n", argv0);
 	fprintf(stderr, " options are\n");
-	fprintf(stderr, " -h                : disable host response message to writes\n");
+	fprintf(stderr, " -h                : enable host response message to writes\n");
 	fprintf(stderr, " -d                : disable device response message to writes\n");
 	fprintf(stderr, " -s <sel>          : set select bits (default is 0xf) \n");
 	fprintf(stderr, " -g <gpo>          : set general purpose output bits \n");
 	fprintf(stderr, " -w <milliseconds> : wait after device access\n");
 	fprintf(stderr, " -l                : listen for incoming device access, never return\n");
+	fprintf(stderr, " -a                : show write access data in ASCII while listening\n");
 	fprintf(stderr, " -t <timeout>      : set stall timeout value in clock cycles\n");
 	fprintf(stderr, "                     set to 0 to disable, default is 1000\n");
 	fprintf(stderr, " -x                : don\'t prepend hex output with 0x verbose output\n");
 	fprintf(stderr, " -v                : verbose output\n");
 
+}
+
+int ascii  = 0;
+uart_wbp_response_t my_uart_wbp_slave_write_handler(uint8_t sel, uint32_t adr, uint32_t dat)
+{
+	if (ascii) {
+		printf("%c", (char)dat);
+	} else {
+		printf("uart_wbp_slave_default_write_handler: sel=0x%x adr=0x%08x dat=0x%08x\n", sel, adr, dat);
+	}
+	return ack;
 }
 
 int main(int argc, char **argv) {
@@ -35,15 +47,15 @@ int main(int argc, char **argv) {
 
 	uint32_t gpo = 0;
 	int set_gpo = 0;
-	uart_wbp_config_t bridge_config = host_sends_write_response | fpga_sends_write_response;
+	uart_wbp_config_t bridge_config = fpga_sends_write_response;
 	for (int i = 1; i < argc; ++i) {
 		if (strcmp(argv[i],"--help") == 0) {
 			print_help(argv[0]);
 			return 0;
 		} else if (strcmp(argv[i],"-h") == 0) {
-			bridge_config &= ~(host_sends_write_response);
+			bridge_config |= (host_sends_write_response);
 			if (verbose) {
-				printf("disable host write response\n");
+				printf("enable host write response\n");
 			}
 		} else if (strcmp(argv[i],"-d") == 0) {
 			bridge_config &= ~(fpga_sends_write_response);
@@ -101,6 +113,8 @@ int main(int argc, char **argv) {
 			verbose = 1;
 		} else if (strcmp(argv[i],"-l") == 0) {
 			listen = 1;
+		} else if (strcmp(argv[i],"-a") == 0) {
+			ascii = 1;
 		} else if (argv[i][0] != '-') {
 			if (device_name_set == 0) {
 				device_name = argv[i];
@@ -140,6 +154,7 @@ int main(int argc, char **argv) {
 		uart_wbp_set_stall_timeout(device, timeout);
 	} 
 	uart_wbp_configure(device, bridge_config);
+	device->write_handler = &my_uart_wbp_slave_write_handler;
 
 	if (set_gpo) {
 		uart_wbp_set_gpo_bits(device, gpo);
@@ -171,7 +186,7 @@ int main(int argc, char **argv) {
 		}
 		for (;;) {
 			int result = uart_wbp_wait(device, -1);
-			if (result == 0) {
+			if (result < 0) {
 				break;
 			}
 		}
